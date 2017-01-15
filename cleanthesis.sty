@@ -267,9 +267,9 @@
 	includefoot,					% 	- include footer space
 	includemp,						% 	- include side note space
 	bindingoffset=0.5cm,			% 	- binding correction
-	top=2.25cm,						% 	- total body: top margin
+	top=3.25cm,						% 	- total body: top margin
 	left=3.75cm,					% 	- total body: left margin (odd pages)
-	right=0.75cm,					% 	- total body: right margin (odd pages)
+	right=1.75cm,					% 	- total body: right margin (odd pages)
 	bottom=1.5cm,					% 	- total body: bottom margin
 	marginparwidth=1.75cm,			% 	- width for side note
 	marginparsep=10pt,				% 	- space between notes and body text (content)
@@ -494,14 +494,15 @@
 	arg1=#1, arg2=#2, arg3=#3%
 }
 
+\RequirePackage{FiraSans}
 % own font definitions
-\newcommand{\helv}{\fontfamily{phv}\fontsize{9}{11}\selectfont}
-\newcommand{\book}{\fontfamily{pbk}\fontseries{m}\fontsize{11}{13}\selectfont}
-\newcommand{\tgherosfont}{\fontfamily{qhv}\selectfont}
+\newcommand{\helv}{\fontfamily{\fira@family}\fontseries{mb}\selectfont}
+\newcommand{\book}{\fontfamily{\fira@family}\fontseries{mb}\selectfont}
+\newcommand{\tgherosfont}{\fontfamily{\fira@family}\fontseries{mb}\selectfont}
 
 \newcommand{\thesispartlabelfont}{\color{ctcolorpartnum}\book\fontsize{60}{60}\selectfont}
 \newcommand{\thesispartfont}{\color{ctcolorparttext}\huge \tgherosfont\selectfont}
-\newcommand{\thesischapterfont}{\color{ctcolorblack}\huge \fontfamily{phv}\selectfont}
+\newcommand{\thesischapterfont}{\color{ctcolorblack}\huge \tgherosfont\selectfont}
 %\newcommand{\thesissectionfont}{\color{ctcolormain}\LARGE\bfseries \tgherosfont}
 \newcommand{\thesissectionfont}{\color{ctcolorsection}\LARGE \tgherosfont}
 \newcommand{\thesissubsectionfont}{\color{ctcolorsubsection}\Large \tgherosfont}
@@ -698,6 +699,3 @@
 %
 % Clean signs around word origins in definitions
 %\newcommand{\cthesisorigin}[1]{\textsf{\textlangle}#1\textsf{\textrangle}}
-
-
-
